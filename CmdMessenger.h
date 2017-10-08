@@ -40,20 +40,11 @@ extern "C"
 	typedef void(*messengerCallbackFunction) (void);
 }
 
-#ifndef MAXCALLBACKS
-	#define MAXCALLBACKS        50   // The maximum number of commands   (default: 50)
-#endif
-#ifndef MESSENGERBUFFERSIZE
-	#define MESSENGERBUFFERSIZE 64   // The length of the commandbuffer  (default: 64)
-#endif
-#ifndef MAXSTREAMBUFFERSIZE
-	#define MAXSTREAMBUFFERSIZE 512  // The length of the streambuffer   (default: 64)
-#endif
-#ifndef DEFAULT_TIMEOUT
-	#define DEFAULT_TIMEOUT     5000 // Time out on unanswered messages. (default: 5s)
-#endif
+#define MAXCALLBACKS        50   // The maximum number of commands   (default: 50)
+#define MESSENGERBUFFERSIZE 50   // The length of the commandbuffer  (default: 64)
+#define MAXSTREAMBUFFERSIZE 50  // The length of the streambuffer   (default: 64)
+#define DEFAULT_TIMEOUT     5000 // Time out on unanswered messages. (default: 5s)
 
-// Message States
 enum
 {
 	kProccesingMessage,            // Message is being received, not reached command separator
